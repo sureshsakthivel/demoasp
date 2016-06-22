@@ -1,0 +1,47 @@
+﻿{
+    "version": "1.0.0-*",
+     "publishOptions": {
+        "include": [
+            "wwwroot",
+            "Views",
+            "web.config",
+            "bundle.js"
+        ]
+    },
+    "dependencies": {
+        "Newtonsoft.Json": "8.0.4-beta1",
+        "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Mvc": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.StaticFiles": "1.0.0-rc2-final",
+        "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
+        "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
+        "Microsoft.NETCore.App": {
+            "type": "platform",
+            "version": "1.0.0-rc2-3002702"
+        }
+    },
+    "tools": {
+        "Microsoft.DotNet.Watcher.Tools": {
+            "version": "1.0.0-*",
+            "imports": "portable-net451+win8"
+        }
+    },
+    "compilationOptions": {
+        "emitEntryPoint": true
+    },
+    "scripts": {
+        "postrestore": ["cd ../.. && npm i && cd src/AspNet5DemoApp"]
+    },    
+    "buildOptions": {
+        "emitEntryPoint": true,
+        "preserveCompilationContext": true,
+        "debugType": "portable"
+    },
+    "runtimeOptions": {
+        "gcServer": false,
+        "gcConcurrent": true
+    },
+    "frameworks": {
+        "netcoreapp1.0": { }
+    }
+}
